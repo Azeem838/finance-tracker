@@ -16,10 +16,12 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
+              Profile
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
+              <%= link_to edit_user_registration_path, class: 'dropdown-item' do %>
+                <%= fa_icon 'edit' %> Edit Profile
+              <% end %>
               <a class="dropdown-item" href="#">Another action</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>
@@ -31,7 +33,7 @@
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item user-name">
-            <%= fa_icon 'user' %><%= current_user.full_name %>
+            <%= fa_icon 'user' %> <%= current_user.full_name %>
           </li>
           <li class="nav-item">
             <%= link_to("Logout", destroy_user_session_path, class: "btn btn-xs btn-danger logout-button", method: :delete) %>
