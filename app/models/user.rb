@@ -30,4 +30,28 @@ class User < ApplicationRecord
 
     'Anonymous'
   end
+
+  def self.search(param)
+    param.strip!
+    to_send_back = (first_name_matchers(param) + last_name_matchers(param) + email_matchers(param)).uniq
+    return nill unless to_send_back
+
+    to_send_back
+  end
+
+  def self.first_name_matchers(param)
+    matchers('first_name', param)
+  end
+
+  def self.last_name_matchers(param)
+    matchers('last_name', param)
+  end
+
+  def self.email_matchers(param)
+    matchers('email', param)
+  end
+
+  def self.matchers(field_name, param)
+    where("#{field_name} like ?", "%#{param}%")
+  end
 end
