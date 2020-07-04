@@ -1,0 +1,24 @@
+<div class="roe">
+  <div class="col-9">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Email</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @friends.each do |friend| %>
+        <tr>
+          <th scope="row"><%= friend.email %></th>
+          <td><%= friend.first_name %> </td>
+          <td><%= friend.last_name %></td>
+          <td><%= link_to 'Stop following', '#', class: 'btn btn-sm btn-warning'%></td> 
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
