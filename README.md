@@ -2,10 +2,8 @@
 
 > Track stocks, add them to your portfolio and see which stocks your friends are following!
 
-![screenshot](app/assets/images/home-page.jpeg)
-![screenshot](app/assets/images/group-page.jpeg)
-![screenshot](app/assets/images/home-page.jpeg)
-![screenshot](app/assets/images/your-groups.jpeg)
+![screenshot](app/assets/images/finance-tracker-profile.png)
+![screenshot](app/assets/images/finance-tracker-friends.png)
 
 Created with Ruby on Rails.
 
